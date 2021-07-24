@@ -1,77 +1,99 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500&display=swap'); */
-@import url("https://fonts.googleapis.com/css?family=Merriweather:300|Work+Sans:700,800");
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 *{
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+
 }
 
-body{
-    font-family: "Merriweather",serif;
-    font-weight: 300;
-    color: #ffffff;
-    line-height: 1.6;
-    background-color: #242333;
-}
-
-ul{
-    list-style-type: none ;
-}
-
-a{
-    font-family: 'Work Sans',sans-serif;
-    text-decoration: none;
-    color: #333;
-}
-
-h1, h2, h3, h4, h5, h6{
-    font-family: 'Work Sans',sans-serif;
-    font-weight: 800;
-    line-height: 1.2;
-    margin: 10px 0;
-}
-
-p{
-    margin: 10px 0;
-}
-
-img{
-    width: 100%;
-}
 .navbar{
-    /* background-color: #047aed; */
-    background-color: #01B0d3;
-    color: #fff;
-    height: 70px;
-}
-
-.navbar ul{
+    background-color:#64f8ee;
+    text-align: center;
     display: flex;
-}
-.navbar a{
-color: #fff;
-padding: 10px;
-margin: 0 5px;
-}
-
-.navbar a:hover{
-    border-bottom: 2px #fff solid;
-}
-.navbar .flex{
+    width: 100%;
     justify-content: space-between;
+    padding: 5px 70px;
+    
 }
 
-.container{
-    max-width: 1100px;
-    margin: 0 auto;
-    overflow: auto;
-    padding: 0 40px;
+.icon{
+    padding-top: 10px;
+    font-size: 40px;
+    font-weight: 800;
+    color: #000;
+    cursor: pointer;
+}
+.navbar ul{
+    display: inline-flex;
+    list-style: none;
+    color: #000;
+}
+.navbar ul li{
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color:#000;
+}
+ .navbar ul li:hover{
+    background:#8b8989;
+    border-radius: 3px;
 }
 
-.flex{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.dropdown{
+    display: none;
+}
+.navbar ul li:hover .dropdown{
+    display: block;
+    position: absolute;
+    background-color:#64f8ee;
+    margin-top: 15px;
+    margin-left: -15px;
+}
+
+.navbar ul li:hover .dropdown ul{
+    display: block;
+    margin: 10px;
+}
+
+.navbar ul li:hover .dropdown ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #292929;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.navbar ul li:hover .dropdown ul li:last-child{
+    border-bottom: none;
+}
+
+.navbar ul li:hover .dropdown ul li a:hover{
+    color: #292929;
+}
+.dropdown-2{
+    display: none;
+}
+.hover-me:hover .dropdown-2{
+    position: absolute;
+    display: block;
+    margin-top: -40px;
+    margin-left: 140px;
+    background-color: #64f8ee;
+}
+
+section{
+    background:url(../images/index3.jpg);
     height: 100%;
+    width: 100%;
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    top: 0;
+    z-index: -1;
+    filter: brightness(30%);
 }
